@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://60t7ja63w6r5"
-path="res://.godot/imported/Button_Disable.png-3a7375b0f4c8f259d6cc3fb7a7228482.ctex"
+path="res://.godot/imported/Button_Disable.png-84f1536e3cd8917ec72d50f68d2ebe27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Disable.png"
-dest_files=["res://.godot/imported/Button_Disable.png-3a7375b0f4c8f259d6cc3fb7a7228482.ctex"]
+source_file="res://assets/Tiny_Swords_Update_10/UI/Buttons/Button_Disable.png"
+dest_files=["res://.godot/imported/Button_Disable.png-84f1536e3cd8917ec72d50f68d2ebe27.ctex"]
 
 [params]
 

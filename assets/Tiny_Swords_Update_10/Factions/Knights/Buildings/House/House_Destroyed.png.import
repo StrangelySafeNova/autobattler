@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crtf32nxddxrx"
-path="res://.godot/imported/House_Destroyed.png-f41594fecafe5d98e36b91428d5b34e6.ctex"
+path="res://.godot/imported/House_Destroyed.png-c93d9398e5e0cdfdba5447bd6f8372c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Swords (Update 010)/Factions/Knights/Buildings/House/House_Destroyed.png"
-dest_files=["res://.godot/imported/House_Destroyed.png-f41594fecafe5d98e36b91428d5b34e6.ctex"]
+source_file="res://assets/Tiny_Swords_Update_10/Factions/Knights/Buildings/House/House_Destroyed.png"
+dest_files=["res://.godot/imported/House_Destroyed.png-c93d9398e5e0cdfdba5447bd6f8372c7.ctex"]
 
 [params]
 

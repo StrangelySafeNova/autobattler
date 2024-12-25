@@ -1,11 +1,12 @@
 extends CharacterBody2D
+class_name Character
 
-@onready var animations: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animations: AnimationPlayer = $animations
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
-		basic_attack(12)
+		basic_attack()
 
-func basic_attack(attack_damage: int) -> void:
+func basic_attack() -> void:
 	animations.play("basic_attack")
 	

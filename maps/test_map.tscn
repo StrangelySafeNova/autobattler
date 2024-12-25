@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://ctqxgcwqfpxfw"]
 
-[ext_resource type="Texture2D" uid="uid://dq04ixyxfyv31" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_wkbiv"]
-[ext_resource type="Texture2D" uid="uid://cwy3yays4xo3i" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="2_ocgib"]
-[ext_resource type="Texture2D" uid="uid://cinpx7ycs8erb" path="res://assets/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="3_xuml0"]
-[ext_resource type="Texture2D" uid="uid://dxss3ygvsdywg" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Water.png" id="4_hfls7"]
-[ext_resource type="Texture2D" uid="uid://c140qlej2o0k1" path="res://assets/Tiny Swords (Update 010)/Terrain/Water/Foam/Foam.png" id="5_8m0ng"]
+[ext_resource type="Texture2D" uid="uid://dq04ixyxfyv31" path="res://assets/Tiny_Swords_Update_10/Terrain/Ground/Tilemap_Flat.png" id="1_wkbiv"]
+[ext_resource type="Texture2D" uid="uid://cwy3yays4xo3i" path="res://assets/Tiny_Swords_Update_10/Terrain/Ground/Tilemap_Elevation.png" id="2_ocgib"]
+[ext_resource type="Texture2D" uid="uid://cinpx7ycs8erb" path="res://assets/Tiny_Swords_Update_10/Terrain/Ground/Shadows.png" id="3_xuml0"]
+[ext_resource type="Texture2D" uid="uid://dxss3ygvsdywg" path="res://assets/Tiny_Swords_Update_10/Terrain/Water/Water.png" id="4_hfls7"]
+[ext_resource type="Texture2D" uid="uid://c140qlej2o0k1" path="res://assets/Tiny_Swords_Update_10/Terrain/Water/Foam/Foam.png" id="5_8m0ng"]
 [ext_resource type="PackedScene" uid="uid://bu5ec0bwu2j6j" path="res://characters/knights/basic_knight/basic_knight.tscn" id="6_shb2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_byyr3"]
@@ -164,3 +164,7 @@ position = Vector2(960, 540)
 
 [node name="basic_knight" parent="." instance=ExtResource("6_shb2f")]
 position = Vector2(903, 468)
+
+[node name="basic_knight2" parent="." instance=ExtResource("6_shb2f")]
+position = Vector2(992, 471)
+scale = Vector2(-1, 1)

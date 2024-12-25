@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpylyqco1oocu"
-path="res://.godot/imported/Orc-shadow.png-cf535cc2d0407e228d2b8ce5d4f94d46.ctex"
+path="res://.godot/imported/Orc-shadow.png-df505244b9d52611ae4d265376ad65c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Orc/Orc/Shadow sprites/Orc-shadow.png"
-dest_files=["res://.godot/imported/Orc-shadow.png-cf535cc2d0407e228d2b8ce5d4f94d46.ctex"]
+source_file="res://assets/Tiny_RPG_Character_Asset_Pack_v1_03/Characters(100x100)/Orc/Orc/Shadow sprites/Orc-shadow.png"
+dest_files=["res://.godot/imported/Orc-shadow.png-df505244b9d52611ae4d265376ad65c3.ctex"]
 
 [params]
 

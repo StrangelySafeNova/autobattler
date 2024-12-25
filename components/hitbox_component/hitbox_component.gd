@@ -1,9 +1,8 @@
 extends Node2D
 class_name Hitbox_Component
 
-@export var health_component: Health_Component
+@export var Base_Attack: int = 25
 
-
-func take_damage(attack: int) -> void:
-	if health_component:
-		health_component.take_damage(attack)
+func _init() -> void:
+	self.collision_layer = 2
+	self.collision_mask = 0

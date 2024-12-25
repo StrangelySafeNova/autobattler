@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5iqw55yujqk6"
-path="res://.godot/imported/03.png-22ac37dc9474ef06b48b47676e42eac8.ctex"
+path="res://.godot/imported/03.png-193224dbd27fd679dfbd931989743115.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Swords (Update 010)/UI/Pointers/03.png"
-dest_files=["res://.godot/imported/03.png-22ac37dc9474ef06b48b47676e42eac8.ctex"]
+source_file="res://assets/Tiny_Swords_Update_10/UI/Pointers/03.png"
+dest_files=["res://.godot/imported/03.png-193224dbd27fd679dfbd931989743115.ctex"]
 
 [params]
 

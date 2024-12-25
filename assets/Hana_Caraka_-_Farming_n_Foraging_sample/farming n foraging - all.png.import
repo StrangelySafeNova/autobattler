@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bd0d2v2mnylo6"
-path="res://.godot/imported/farming n foraging - all.png-47de42476b9239f8a207f8f204d6b38c.ctex"
+path="res://.godot/imported/farming n foraging - all.png-287c2aa81c075ab496fea052c27e4fb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hana Caraka - Farming n Foraging [sample]/farming n foraging - all.png"
-dest_files=["res://.godot/imported/farming n foraging - all.png-47de42476b9239f8a207f8f204d6b38c.ctex"]
+source_file="res://assets/Hana_Caraka_-_Farming_n_Foraging_sample/farming n foraging - all.png"
+dest_files=["res://.godot/imported/farming n foraging - all.png-287c2aa81c075ab496fea052c27e4fb9.ctex"]
 
 [params]
 

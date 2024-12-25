@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://deadem0km2a4w"
-path="res://.godot/imported/Button_Red_3Slides.png-228566133a5409c6e5f0604b37d085f8.ctex"
+path="res://.godot/imported/Button_Red_3Slides.png-abf3db233c104e7ed6fcfdc9df95b90f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Red_3Slides.png"
-dest_files=["res://.godot/imported/Button_Red_3Slides.png-228566133a5409c6e5f0604b37d085f8.ctex"]
+source_file="res://assets/Tiny_Swords_Update_10/UI/Buttons/Button_Red_3Slides.png"
+dest_files=["res://.godot/imported/Button_Red_3Slides.png-abf3db233c104e7ed6fcfdc9df95b90f.ctex"]
 
 [params]
 

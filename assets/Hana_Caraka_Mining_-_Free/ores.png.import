@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7a0qqpllpern"
-path="res://.godot/imported/ores.png-b3e954abeb8145b69247cb2f5a8f238c.ctex"
+path="res://.godot/imported/ores.png-43ea0175854c962f238170bd3236e7aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hana Caraka Mining - Free/ores.png"
-dest_files=["res://.godot/imported/ores.png-b3e954abeb8145b69247cb2f5a8f238c.ctex"]
+source_file="res://assets/Hana_Caraka_Mining_-_Free/ores.png"
+dest_files=["res://.godot/imported/ores.png-43ea0175854c962f238170bd3236e7aa.ctex"]
 
 [params]
 

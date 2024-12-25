@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0v88k6bp0t4f"
-path="res://.godot/imported/sunflower.png-06f46ed7af3c5a494146d1ecb2c469ba.ctex"
+path="res://.godot/imported/sunflower.png-92b27e183badca817d83680bb7b532fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hana Caraka - Farming n Foraging [sample]/flowers/sunflower.png"
-dest_files=["res://.godot/imported/sunflower.png-06f46ed7af3c5a494146d1ecb2c469ba.ctex"]
+source_file="res://assets/Hana_Caraka_-_Farming_n_Foraging_sample/flowers/sunflower.png"
+dest_files=["res://.godot/imported/sunflower.png-92b27e183badca817d83680bb7b532fb.ctex"]
 
 [params]
 
