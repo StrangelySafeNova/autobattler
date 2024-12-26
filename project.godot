@@ -20,6 +20,11 @@ config/icon="res://icon.png"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[global_group]
+
+Knights="The good guys"
+Goblins="The bad guys'"
+
 [layer_names]
 
 2d_physics/layer_1="Game_World"

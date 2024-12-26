@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://37n8gc7rvf8g"]
+
+[ext_resource type="Script" path="res://components/ai_components/ai_first_enemy/ai_first_enemy.gd" id="1_e6ddy"]
+
+[node name="ai_first_enemy" type="Node2D"]
+script = ExtResource("1_e6ddy")
+TARGET_GROUP = "Knights"

@@ -169,3 +169,7 @@ position = Vector2(878, 470)
 [node name="basic_goblin" parent="." instance=ExtResource("7_tt8ek")]
 position = Vector2(1118, 470)
 scale = Vector2(-1, 1)
+
+[node name="basic_goblin2" parent="." instance=ExtResource("7_tt8ek")]
+position = Vector2(1221, 363)
+scale = Vector2(-1, 1)

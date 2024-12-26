@@ -5,11 +5,6 @@ basic knight is structured like so:
 		(one for each), these functions are used by `animations` to play them
 	combat-related nodes are under `combat`
 '''
-
 extends CharacterBody2D
 
-@onready var animations: AnimationPlayer = $knights_animations/animations
-
-func basic_attack() -> void:
-	animations.play("basic_attack")
-	
+@export var FACTION: Factions.Factions
