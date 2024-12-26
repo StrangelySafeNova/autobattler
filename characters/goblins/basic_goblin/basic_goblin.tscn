@@ -181,9 +181,8 @@ height = 60.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_nrpo2"]
 radius = 85.0
 
-[node name="basic_goblin" type="CharacterBody2D"]
+[node name="basic_goblin" type="CharacterBody2D" groups=["Entities", "Goblins"]]
 script = ExtResource("1_wc5in")
-FACTION = 1
 
 [node name="interractable_area" type="CollisionShape2D" parent="."]
 position = Vector2(0, 13)

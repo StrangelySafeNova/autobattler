@@ -164,8 +164,9 @@ height = 58.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_h5nt1"]
 radius = 85.0
 
-[node name="basic_knight" type="CharacterBody2D" groups=["Knights"]]
+[node name="basic_knight" type="CharacterBody2D" groups=["Entities", "Knights"]]
 script = ExtResource("1_i2lw2")
+ENEMY_GROUP = &"Goblins"
 
 [node name="interactable_area" type="CollisionShape2D" parent="."]
 visible = false
@@ -186,8 +187,8 @@ libraries = {
 
 [node name="combat" type="Node2D" parent="."]
 
-[node name="ai_first_enemy" parent="combat" instance=ExtResource("4_derrr")]
-TARGET_GROUP = &"Knights"
+[node name="ai_first_enemy" parent="combat" node_paths=PackedStringArray("CHARACTER") instance=ExtResource("4_derrr")]
+CHARACTER = NodePath("../..")
 
 [node name="attacks" type="Node2D" parent="combat"]
 script = ExtResource("7_wlynk")

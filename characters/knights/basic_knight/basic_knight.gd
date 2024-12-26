@@ -7,4 +7,6 @@ basic knight is structured like so:
 '''
 extends CharacterBody2D
 
-@export var FACTION: Factions.Factions
+@export var ENEMY_GROUP: StringName
+
+var enemies = get_tree().get_nodes_in_group(ENEMY_GROUP)

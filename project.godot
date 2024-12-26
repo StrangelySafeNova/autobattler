@@ -24,11 +24,13 @@ window/size/viewport_height=1080
 
 Knights="The good guys"
 Goblins="The bad guys'"
+Entities="A group for every entity (enemy/ally)"
 
 [layer_names]
 
 2d_physics/layer_1="Game_World"
 2d_physics/layer_2="HitBoxes"
+2d_physics/layer_3="Scanner"
 
 [rendering]
 
