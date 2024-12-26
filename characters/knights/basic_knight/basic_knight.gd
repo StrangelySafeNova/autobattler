@@ -1,11 +1,14 @@
+'''
+basic knight is structured like so:
+	animations are in the nodes `animations` and `knights_animations`
+		`knights_animation` has a script with functions that play its animations
+		(one for each), these functions are used by `animations` to play them
+	combat-related nodes are under `combat`
+'''
+
 extends CharacterBody2D
-class_name Character
 
-@onready var animations: AnimationPlayer = $animations
-
-func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-		basic_attack()
+@onready var animations: AnimationPlayer = $knights_animations/animations
 
 func basic_attack() -> void:
 	animations.play("basic_attack")

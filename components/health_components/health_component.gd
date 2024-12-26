@@ -1,7 +1,7 @@
 extends Node2D
 class_name Health_Component
 
-@export var CHARACTER: Character
+@export var CHARACTER: CharacterBody2D
 @export var Max_Health: int = 100
 var current_health: int
 

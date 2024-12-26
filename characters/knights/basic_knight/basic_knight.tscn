@@ -8,52 +8,8 @@
 [ext_resource type="Script" path="res://characters/knights/basic_knight/knights_animations.gd" id="4_xx60k"]
 [ext_resource type="PackedScene" uid="uid://b25fv4mseye1q" path="res://components/hitbox_component/hitbox_component.tscn" id="5_c8vla"]
 
-[sub_resource type="Animation" id="Animation_iqjiy"]
-length = 0.001
-step = 0.1
-
-[sub_resource type="Animation" id="Animation_suxdc"]
-resource_name = "basic_attack"
-length = 0.6
-step = 0.1
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("knights_animations")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"values": [{
-"args": [],
-"method": &"play_basic_attack"
-}, {
-"args": [],
-"method": &"play_idle"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("knights_animations/basic_attack/basic_attack_hitbox:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.3, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ce3i"]
-_data = {
-"RESET": SubResource("Animation_iqjiy"),
-"basic_attack": SubResource("Animation_suxdc")
-}
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_0bax3"]
-radius = 19.105
+radius = 19.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_euvkm"]
 atlas = ExtResource("2_n54yi")
@@ -152,6 +108,50 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_iqjiy"]
+length = 0.001
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_suxdc"]
+resource_name = "basic_attack"
+length = 0.6
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("knights_animations")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_basic_attack"
+}, {
+"args": [],
+"method": &"play_idle"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("combat/attacks/basic_attack/basic_attack_hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ce3i"]
+_data = {
+"RESET": SubResource("Animation_iqjiy"),
+"basic_attack": SubResource("Animation_suxdc")
+}
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lu2qp"]
 radius = 18.0
 height = 58.0
@@ -160,18 +160,10 @@ height = 58.0
 radius = 85.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpd3b"]
-size = Vector2(63, 112.75)
+size = Vector2(69, 112.75)
 
 [node name="basic_knight" type="CharacterBody2D"]
 script = ExtResource("1_i2lw2")
-
-[node name="animations" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_3ce3i")
-}
-
-[node name="HealthComponent" parent="." node_paths=PackedStringArray("CHARACTER") instance=ExtResource("2_kwah0")]
-CHARACTER = NodePath("..")
 
 [node name="interactable_area" type="CollisionShape2D" parent="."]
 position = Vector2(0, 13)
@@ -179,28 +171,42 @@ shape = SubResource("CircleShape2D_0bax3")
 
 [node name="knights_animations" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8l4j7")
-animation = &"basic_attack"
+animation = &"idle"
 autoplay = "idle"
 script = ExtResource("4_xx60k")
 
-[node name="hurtbox_component" parent="knights_animations" node_paths=PackedStringArray("health_component") instance=ExtResource("3_xn1gw")]
-health_component = NodePath("../../HealthComponent")
+[node name="animations" type="AnimationPlayer" parent="knights_animations"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_3ce3i")
+}
 
-[node name="hurtbox" type="CollisionShape2D" parent="knights_animations/hurtbox_component"]
+[node name="combat" type="Node2D" parent="."]
+
+[node name="HealthComponent" parent="combat" node_paths=PackedStringArray("CHARACTER") instance=ExtResource("2_kwah0")]
+CHARACTER = NodePath("../..")
+
+[node name="hurtbox_component" parent="combat" node_paths=PackedStringArray("health_component") instance=ExtResource("3_xn1gw")]
+health_component = NodePath("../HealthComponent")
+
+[node name="hurtbox" type="CollisionShape2D" parent="combat/hurtbox_component"]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_lu2qp")
 
-[node name="range_component" parent="knights_animations" instance=ExtResource("4_1wyss")]
+[node name="range_component" parent="combat" instance=ExtResource("4_1wyss")]
+visible = false
 
-[node name="range_hitbox" type="CollisionShape2D" parent="knights_animations/range_component"]
+[node name="range_hitbox" type="CollisionShape2D" parent="combat/range_component"]
 shape = SubResource("CircleShape2D_h5nt1")
 debug_color = Color(0, 0.831373, 0, 0.419608)
 
-[node name="basic_attack" parent="knights_animations" instance=ExtResource("5_c8vla")]
+[node name="attacks" type="Node2D" parent="combat"]
+
+[node name="basic_attack" parent="combat/attacks" instance=ExtResource("5_c8vla")]
 visible = false
 
-[node name="basic_attack_hitbox" type="CollisionShape2D" parent="knights_animations/basic_attack"]
-position = Vector2(55.5, -14.625)
+[node name="basic_attack_hitbox" type="CollisionShape2D" parent="combat/attacks/basic_attack"]
+position = Vector2(52.5, -14.625)
 shape = SubResource("RectangleShape2D_rpd3b")
 disabled = true
 debug_color = Color(0.990977, 0, 0.27154, 0.42)

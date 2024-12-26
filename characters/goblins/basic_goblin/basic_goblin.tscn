@@ -1,0 +1,230 @@
+[gd_scene load_steps=29 format=3 uid="uid://logb1tat3y2y"]
+
+[ext_resource type="Texture2D" uid="uid://cggp5b0cmcr6r" path="res://assets/Tiny_Swords_Update_10/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="1_r3u66"]
+[ext_resource type="Script" path="res://characters/goblins/basic_goblin/basic_goblin.gd" id="1_wc5in"]
+[ext_resource type="Script" path="res://characters/goblins/basic_goblin/goblin_animation.gd" id="2_migen"]
+[ext_resource type="PackedScene" uid="uid://b25fv4mseye1q" path="res://components/hitbox_component/hitbox_component.tscn" id="2_ro41q"]
+[ext_resource type="PackedScene" uid="uid://divaoje0slcec" path="res://components/hurtbox_component/hurtbox_component.tscn" id="3_55bas"]
+[ext_resource type="PackedScene" uid="uid://d1ucaydwnhf5v" path="res://components/range_component/range_component.tscn" id="4_kxqgp"]
+[ext_resource type="PackedScene" uid="uid://b2wkvxdjqaj1t" path="res://components/health_components/health_component.tscn" id="5_ofxp5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b58na"]
+radius = 19.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fcup"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(0, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsv78"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(192, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3s73"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(384, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxc5j"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(576, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mc4e"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(768, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1h4d"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(960, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7a1a"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sl02p"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0xcc"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cd5p"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q68kx"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfbuh"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7mib"]
+atlas = ExtResource("1_r3u66")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fdu5n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fcup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsv78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3s73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxc5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mc4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1h4d")
+}],
+"loop": false,
+"name": &"basic_attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7a1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sl02p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0xcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cd5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q68kx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfbuh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7mib")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_exh6v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("combat/attacks/basic_attack/hitbox_basic_attack:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_6s5r2"]
+resource_name = "basic_attack"
+length = 0.60001
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("goblin_animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_basic_attack"
+}, {
+"args": [],
+"method": &"play_idle"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("combat/attacks/basic_attack/hitbox_basic_attack:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n0u7n"]
+_data = {
+"RESET": SubResource("Animation_exh6v"),
+"basic_attack": SubResource("Animation_6s5r2")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cugwn"]
+radius = 17.0
+height = 60.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nrpo2"]
+radius = 85.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7v2lt"]
+size = Vector2(70.5, 112.75)
+
+[node name="basic_goblin" type="CharacterBody2D"]
+script = ExtResource("1_wc5in")
+
+[node name="interractable_area" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_b58na")
+
+[node name="goblin_animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fdu5n")
+animation = &"idle"
+autoplay = "idle"
+script = ExtResource("2_migen")
+
+[node name="animations" type="AnimationPlayer" parent="goblin_animation"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_n0u7n")
+}
+
+[node name="combat" type="Node2D" parent="."]
+
+[node name="HealthComponent" parent="combat" node_paths=PackedStringArray("CHARACTER") instance=ExtResource("5_ofxp5")]
+position = Vector2(1, 11)
+CHARACTER = NodePath("../..")
+
+[node name="hurtbox_component2" parent="combat" instance=ExtResource("3_55bas")]
+
+[node name="hurtbox" type="CollisionShape2D" parent="combat/hurtbox_component2"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_cugwn")
+
+[node name="range_component" parent="combat" instance=ExtResource("4_kxqgp")]
+visible = false
+
+[node name="range" type="CollisionShape2D" parent="combat/range_component"]
+shape = SubResource("CircleShape2D_nrpo2")
+debug_color = Color(0, 0.658824, 0, 0.419608)
+
+[node name="attacks" type="Node2D" parent="combat"]
+
+[node name="basic_attack" parent="combat/attacks" instance=ExtResource("2_ro41q")]
+visible = false
+
+[node name="hitbox_basic_attack" type="CollisionShape2D" parent="combat/attacks/basic_attack"]
+position = Vector2(52.25, -11)
+shape = SubResource("RectangleShape2D_7v2lt")
+disabled = true
+debug_color = Color(0.996589, 0, 0.183735, 0.42)

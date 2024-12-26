@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ctqxgcwqfpxfw"]
+[gd_scene load_steps=14 format=3 uid="uid://ctqxgcwqfpxfw"]
 
 [ext_resource type="Texture2D" uid="uid://dq04ixyxfyv31" path="res://assets/Tiny_Swords_Update_10/Terrain/Ground/Tilemap_Flat.png" id="1_wkbiv"]
 [ext_resource type="Texture2D" uid="uid://cwy3yays4xo3i" path="res://assets/Tiny_Swords_Update_10/Terrain/Ground/Tilemap_Elevation.png" id="2_ocgib"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dxss3ygvsdywg" path="res://assets/Tiny_Swords_Update_10/Terrain/Water/Water.png" id="4_hfls7"]
 [ext_resource type="Texture2D" uid="uid://c140qlej2o0k1" path="res://assets/Tiny_Swords_Update_10/Terrain/Water/Foam/Foam.png" id="5_8m0ng"]
 [ext_resource type="PackedScene" uid="uid://bu5ec0bwu2j6j" path="res://characters/knights/basic_knight/basic_knight.tscn" id="6_shb2f"]
+[ext_resource type="PackedScene" uid="uid://logb1tat3y2y" path="res://characters/goblins/basic_goblin/basic_goblin.tscn" id="7_tt8ek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_byyr3"]
 texture = ExtResource("1_wkbiv")
@@ -163,8 +164,8 @@ layer_2/tile_data = PackedInt32Array(917506, 1, 5, 917507, 65537, 3, 917508, 655
 position = Vector2(960, 540)
 
 [node name="basic_knight" parent="." instance=ExtResource("6_shb2f")]
-position = Vector2(903, 468)
+position = Vector2(878, 470)
 
-[node name="basic_knight2" parent="." instance=ExtResource("6_shb2f")]
-position = Vector2(992, 471)
+[node name="basic_goblin" parent="." instance=ExtResource("7_tt8ek")]
+position = Vector2(1118, 470)
 scale = Vector2(-1, 1)
