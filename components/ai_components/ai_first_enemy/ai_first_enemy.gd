@@ -5,14 +5,14 @@ extends Node2D
 
 @onready var enemy_scanner: Timer = $enemy_scanner
 
-var enemies = CHARACTER.enemies
+#var enemies = CHARACTER.enemies
 var pursuing
 
 func _ready() -> void:
 	enemy_scanner.start()
 
 func _on_timer_timeout() -> void:
-	pursuing = get_closest_enemy(enemies)
+	#pursuing = get_closest_enemy(enemies)
 	enemy_scanner.start()
 
 func get_closest_enemy(ennemy_list: Array) -> Node2D:
@@ -28,5 +28,6 @@ func get_closest_enemy(ennemy_list: Array) -> Node2D:
 				closest_enemy = target
 	return closest_enemy
 
-func _physics_process(delta: float) -> void:
-	if not RANGE.
+#func _physics_process(delta: float) -> void:
+	#if not RANGE.in_range:
+		#global_position += Vector2 (delta * )

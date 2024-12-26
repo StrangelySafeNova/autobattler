@@ -9,4 +9,4 @@ extends CharacterBody2D
 
 @export var ENEMY_GROUP: StringName
 
-var enemies = get_tree().get_nodes_in_group(ENEMY_GROUP)
+#var enemies = get_tree().get_nodes_in_group(ENEMY_GROUP)
